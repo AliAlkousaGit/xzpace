@@ -5,7 +5,7 @@ with open("requirements.txt") as f:
 
 setup(
     name="xzpace",
-    version="0.0.1",
+    version="0.0.2",
     description="XZPACE Pricing Dashboard - Custom ERPNext App",
     author="XZPACE",
     author_email="info@xzpace.com",

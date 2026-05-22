@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "xzpace"
-version = "0.0.1"
+version = "0.0.2"
 description = "XZPACE Pricing Dashboard - Custom ERPNext App"
 authors = [{name = "XZPACE", email = "info@xzpace.com"}]
 requires-python = ">=3.8"
