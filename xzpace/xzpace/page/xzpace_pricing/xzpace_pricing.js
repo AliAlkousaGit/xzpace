@@ -7,6 +7,33 @@ frappe.pages['xzpace_pricing'].on_page_load = function(wrapper) {
 	$(page.main).html(getDashboardHTML());
 	$(wrapper).find('.page-head').hide();
 	initDashboard();
+	// Expose all handler functions to global scope for onclick/oninput/onchange
+	window.xzShowTab=xzShowTab;window.xzRenderDashboard=xzRenderDashboard;
+	window.xzRenderProducts=xzRenderProducts;window.xzRenderProductCard=xzRenderProductCard;
+	window.xzRenderMaterials=xzRenderMaterials;window.xzRenderMachines=xzRenderMachines;
+	window.xzRenderControl=xzRenderControl;window.xzRenderQuote=xzRenderQuote;
+	window.xzRenderCatalog=xzRenderCatalog;window.xzRenderQuotePreview=xzRenderQuotePreview;
+	window.xzCalcProduct=xzCalcProduct;window.xzSaveState=xzSaveState;
+	window.xzGetMatRate=xzGetMatRate;window.xzCur=xzCur;window.xzFmt=xzFmt;window.xzN=xzN;
+	window.xzAddProduct=xzAddProduct;window.xzDeleteProduct=xzDeleteProduct;
+	window.xzToggleProduct=xzToggleProduct;window.xzUpdProd=xzUpdProd;
+	window.xzUpdProdPct=xzUpdProdPct;
+	window.xzAddMat=xzAddMat;window.xzUpdMat=xzUpdMat;window.xzRemoveMat=xzRemoveMat;
+	window.xzAddUph=xzAddUph;window.xzUpdUph=xzUpdUph;window.xzRemoveUph=xzRemoveUph;
+	window.xzAddFin=xzAddFin;window.xzUpdFin=xzUpdFin;window.xzRemoveFin=xzRemoveFin;
+	window.xzAddLabour=xzAddLabour;window.xzUpdLabour=xzUpdLabour;window.xzRemoveLabour=xzRemoveLabour;
+	window.xzUpdMisc=xzUpdMisc;
+	window.xzSetMatFilter=xzSetMatFilter;window.xzAddLibItem=xzAddLibItem;
+	window.xzUpdLib=xzUpdLib;window.xzRemoveLib=xzRemoveLib;
+	window.xzOpenLibPicker=xzOpenLibPicker;window.xzCloseLibPicker=xzCloseLibPicker;
+	window.xzPickLibItem=xzPickLibItem;window.xzLpFilter=xzLpFilter;
+	window.xzAddMachine=xzAddMachine;window.xzUpdMachineLib=xzUpdMachineLib;
+	window.xzRemoveMachineLib=xzRemoveMachineLib;
+	window.xzCtrlSave=xzCtrlSave;window.xzUpdLabourRate=xzUpdLabourRate;
+	window.xzAddPaySchedule=xzAddPaySchedule;window.xzUpdPaySched=xzUpdPaySched;
+	window.xzRemovePaySched=xzRemovePaySched;
+	window.xzQSave=xzQSave;window.xzToggleQProduct=xzToggleQProduct;
+	window.xzExportPDF=xzExportPDF;window.xzExportCatalog=xzExportCatalog;
 };
 
 /* ═══════════════════════════════════════════════════════════════
