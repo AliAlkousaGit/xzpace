@@ -1,5 +1,39 @@
 import frappe
 import json
+import os
+
+
+def patch_page():
+	"""Fix page JS registration name and DOM injection — runs as admin during migrate."""
+	try:
+		page = frappe.get_doc("Page", "xzpace_pricing")
+	except frappe.DoesNotExistError:
+		# try old name
+		try:
+			page = frappe.get_doc("Page", "xzpace-pricing")
+		except frappe.DoesNotExistError:
+			return
+
+	page.flags.ignore_permissions = True
+	page.flags.do_not_update_json = True
+
+	# Read the JS file directly from disk
+	from frappe.modules import get_module_path, scrub
+	page_name = scrub(page.name)
+	js_path = os.path.join(get_module_path(page.module), "page", page_name, page_name + ".js")
+	if os.path.exists(js_path):
+		with open(js_path) as f:
+			script = f.read()
+		# Ensure JS registers with the correct page name
+		script = script.replace("frappe.pages['xzpace-pricing']", "frappe.pages['xzpace_pricing']")
+		# Write fixed script back to disk
+		with open(js_path, "w") as f:
+			f.write(script)
+		# Also write into page record so it loads correctly
+		page.script = script
+
+	page.save(ignore_permissions=True)
+	frappe.db.commit()
 
 
 @frappe.whitelist()
