@@ -1,10 +1,10 @@
-frappe.pages['xzpace-pricing'].on_page_load = function(wrapper) {
+frappe.pages['xzpace_pricing'].on_page_load = function(wrapper) {
 	var page = frappe.ui.make_app_page({
 		parent: wrapper,
 		title: 'XZPACE Pricing Dashboard',
 		single_column: true
 	});
-	$(wrapper).find('.layout-main-section').andSelf().find('.layout-main-section').html(getDashboardHTML());
+	$(page.main).html(getDashboardHTML());
 	$(wrapper).find('.page-head').hide();
 	initDashboard();
 };

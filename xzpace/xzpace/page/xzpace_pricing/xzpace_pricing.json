@@ -1,28 +1,22 @@
 {
- "creation": "2026-05-22 10:00:00.000000",
+ "content": null,
+ "creation": "2026-05-22 03:59:27.654795",
  "docstatus": 0,
  "doctype": "Page",
- "icon": "calculator",
  "idx": 0,
- "modified": "2026-05-22 10:00:00.000000",
+ "modified": "2026-05-22 13:36:09.177422",
  "modified_by": "Administrator",
- "module": "Xzpace",
- "name": "xzpace_pricing",
+ "module": "xzpace",
+ "name": "xzpace-pricing",
  "owner": "Administrator",
+ "page_name": "xzpace_pricing",
  "roles": [
   {
    "role": "System Manager"
-  },
-  {
-   "role": "Xzpace Manager"
-  },
-  {
-   "role": "Xzpace User"
   }
  ],
- "script": "",
- "standard": "1",
- "style": "",
- "system_page": 0,
- "title": "XZPACE Pricing"
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0
 }
