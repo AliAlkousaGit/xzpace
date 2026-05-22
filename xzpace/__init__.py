@@ -1,0 +1,6 @@
+app_name = "xzpace"
+app_title = "XZPACE"
+app_publisher = "XZPACE"
+app_description = "XZPACE Pricing Dashboard"
+app_email = "info@xzpace.com"
+app_license = "MIT"

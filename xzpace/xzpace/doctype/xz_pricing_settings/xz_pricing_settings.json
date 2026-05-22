@@ -1,0 +1,94 @@
+{
+ "actions": [],
+ "creation": "2026-05-22 10:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "default_currency",
+  "default_tax_rate",
+  "column_break_1",
+  "default_validity_days",
+  "default_company",
+  "section_defaults",
+  "default_terms"
+ ],
+ "fields": [
+  {
+   "fieldname": "default_currency",
+   "fieldtype": "Link",
+   "label": "Default Currency",
+   "options": "Currency",
+   "default": "SAR"
+  },
+  {
+   "fieldname": "default_tax_rate",
+   "fieldtype": "Percent",
+   "label": "Default Tax Rate (%)",
+   "default": "15"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "default_validity_days",
+   "fieldtype": "Int",
+   "label": "Default Quote Validity (Days)",
+   "default": "30"
+  },
+  {
+   "fieldname": "default_company",
+   "fieldtype": "Link",
+   "label": "Default Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "section_defaults",
+   "fieldtype": "Section Break",
+   "label": "Default Content"
+  },
+  {
+   "fieldname": "default_terms",
+   "fieldtype": "Text Editor",
+   "label": "Default Terms and Conditions"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "is_single": 1,
+ "istable": 0,
+ "links": [],
+ "modified": "2026-05-22 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Xzpace",
+ "name": "XZ Pricing Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Xzpace Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
